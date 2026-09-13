@@ -17,7 +17,7 @@ Connect
 
    Wireless - WiFi
    
-   The pi is running a script named accesspopup to handle automatic wifi hotspot. More info available at https://www.raspberryconnect.com/projects/65-raspberrypi-hotspot-accesspoints/203-automated-switching-accesspoint-wifi-     network
+   The pi is running a script named accesspopup to handle automatic wifi hotspot. More info available at https://www.raspberryconnect.com/projects/65-raspberrypi-hotspot-accesspoints/203-automated-switching-accesspoint-wifi-network
       please read it!
    
    When the pi boots up, it will first try to connect to a known local wifi network. If no known network is available, the pi will start its own wifi hotspot. You can access this hotspot with these credentials
