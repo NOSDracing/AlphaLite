@@ -66,5 +66,5 @@ You may provide both power and data over the usb c port. With the correct adapte
 
 Backpack
 
-An external ESP32 ELRS backpack may be connected to the USB port provided the connection is unused.
-Backpack(VRxC_ELRS) allows for the race director to start a race from their remote controller. Backpack functionality also allows for on screen messages in your HDZero Goggles including race start, and lap time.
+An external ESP32 ELRS backpack may be connected to the USB port.
+ELRS Backpack (VRxC_ELRS) allows for on screen messages in your HDZero Goggles including race start, and lap time. Backpack functionality also allows for the race director to start and stop a race from their remote controller to allow them to be on the flight line.
