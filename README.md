@@ -7,7 +7,7 @@ Power
 
 There are two inputs to the device; a USB C connector and an MR30 connector. Both inputs are directly connected together. DO NOT connect power input at both connectors at the same time!
 
-Unit will power on when it receives 5v at either input. You may shut the unit off by using the shutdown button in the RotorHazard admin page, or pressing and holding the button on the bottom of the unit labeled "shtdwn" for 4 seconds. Once the green light on the top of the unit(pi) turns off ~10sec, you may safely unplug your unit. 
+Unit will power on when it receives 5v at either input. You may shut the unit off by using the shutdown button in the RotorHazard admin page, or pressing and holding the button on the bottom of the unit labeled "shtdwn" for 4 seconds. Once the green light on the top of the unit(RaspberryPi) turns off ~10sec, you may safely unplug your unit. 
 
 At power on(plug in), you will first be greeted by a Red led on the bottom of the unit to indicate a valid power supply. The White led on the bottom of the unit represents the stm32 processor activity. It should be slowly blinking white. Once connected to the RotorHazard web server the stm32 led should be rapidly blinking.
 
@@ -15,18 +15,18 @@ Connect
 
    Wireless - WiFi
    
-The pi is running a script named accesspopup to handle automatic wifi hotspot. More info available at https://www.raspberryconnect.com/projects/65-raspberrypi-hotspot-accesspoints/203-automated-switching-accesspoint-wifi-network
-please read it!
+      The pi is running a script named accesspopup to handle automatic wifi hotspot. More info available at https://www.raspberryconnect.com/projects/65-raspberrypi-hotspot-accesspoints/203-automated-switching-accesspoint-wifi-      network
+      please read it!
    
-When the pi boots up, it will first try to connect to a known local wifi network. If no known network is available, the pi will start its own wifi hotspot. You can access this hotspot with these credentials
-   Name: alphaLite timer
-   Password: password
+      When the pi boots up, it will first try to connect to a known local wifi network. If no known network is available, the pi will start its own wifi hotspot. You can access this hotspot with these credentials
+      Name: alphaLite timer
+      Password: password
 
    Wired
 
-You may connect to a wired network in two ways. 
-First, you may power the unit via its mr30 connector and then connect a simple ethernet to usb c adapter.
-You may also choose to use an ethernet + poe to usb c + pd converter to supply both power and data to your unit over one cable.
+      You may connect to a wired network in two ways. 
+      First, you may power the unit via its mr30 connector and then connect a simple ethernet to usb c adapter.
+      You may also choose to use an ethernet + poe to usb c + pd converter to supply both power and data to your unit over one cable.
 
 Control
 
@@ -43,10 +43,11 @@ via your web browser.
 
 When connected to a known wifi network you must currently determine your own IP address. No static IP is currently implemented.
 
-RGB LED!
+RGB Race Status LEDs!
 
-The unit provides a 5v logic RGB led control output, compatible with ws2812 etc on the MR30 connector. 
-Our preference is that you DO NOT power your leds through the unit. However, the unit is specified to condfidently handle the maximum current availabe in the USB spec of 3A @ 5v passed from USB through to the MR30 output, if your power source is capable.
+The unit provides a RGB led control output, compatible with ws2812 etc on the MR30 connector.
+This allows you to set RGB led schemes for events such as a staging sequence for race start, and color change for individual pilot pass.
+Our preference is that you DO NOT power your leds through the unit. However, the unit is specified to condfidently handle the maximum current availabe in a non-negotiated USB connection of 3A @ 5v passed from USB through to the MR30 output, if your power source is capable.
 The unit itself needs ~1A,+ more at startup.
 This should leave enough headroom to run a 24" flag pole of about 34 leds at max brightness or a RaceGOW gate of 110 leds at medium brightness.
 You are responsible for safe operation of your unit. An led power draw calculator can be found at https://wled-calculator.github.io
@@ -64,4 +65,5 @@ You may provide both power and data over the usb c port. With the correct adapte
 
 Backpack
 
-An external ESP32 ELRS backpack may be connected to the USB port provided the connection is unused. 
+An external ESP32 ELRS backpack may be connected to the USB port provided the connection is unused.
+Backpack(VRxC_ELRS) allows for the race director to start a race from their remote controller. Backpack functionality also allows for on screen messages in your HDZero Goggles including race start, and lap time.
