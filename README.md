@@ -15,18 +15,18 @@ Connect
 
    Wireless - WiFi
    
-      The pi is running a script named accesspopup to handle automatic wifi hotspot. More info available at https://www.raspberryconnect.com/projects/65-raspberrypi-hotspot-accesspoints/203-automated-switching-accesspoint-wifi-      network
+   The pi is running a script named accesspopup to handle automatic wifi hotspot. More info available at https://www.raspberryconnect.com/projects/65-raspberrypi-hotspot-accesspoints/203-automated-switching-accesspoint-wifi-      network
       please read it!
    
-      When the pi boots up, it will first try to connect to a known local wifi network. If no known network is available, the pi will start its own wifi hotspot. You can access this hotspot with these credentials
+   When the pi boots up, it will first try to connect to a known local wifi network. If no known network is available, the pi will start its own wifi hotspot. You can access this hotspot with these credentials
       Name: alphaLite timer
       Password: password
 
    Wired
 
-      You may connect to a wired network in two ways. 
-      First, you may power the unit via its mr30 connector and then connect a simple ethernet to usb c adapter.
-      You may also choose to use an ethernet + poe to usb c + pd converter to supply both power and data to your unit over one cable.
+   You may connect to a wired network in two ways. 
+   First, you may power the unit via its mr30 connector and then connect a simple ethernet to usb c adapter.
+   You may also choose to use an ethernet + poe to usb c + pd converter to supply both power and data to your unit over one cable.
 
 Control
 
@@ -54,7 +54,8 @@ You are responsible for safe operation of your unit. An led power draw calculato
 
 Hardware Info
 
-The stm32f103 is connected to the Raspberry Pi Zero 2 W via its primary UART. Under RotorHazards advanced settings you will need to set the node address as "/dev/serial0"; "serial0" alone is not sufficient and may cause a lockout requiring you to manualy delete the config.json file located in /RHdata to restore operation. 
+5V 3A MAX
+The stm32f103 is connected to the Raspberry Pi Zero 2 W via its primary UART. Under RotorHazards advanced settings you will need to set the node address as "/dev/serial0"; "serial0" alone is not sufficient and may cause a lockout requiring you to manualy delete the config.json file located in /RHdata to restore operation.
 
 Power Schemes
 
